@@ -14,7 +14,13 @@ class QuotesSpider(scrapy.Spider):
     
     custom_settings = {
         'FEED_URI': 'quotes.json',
-        'FEED_FORMAT': 'json'
+        'FEED_FORMAT': 'json',
+        'CONCURRENT_REQUESTS': 24,
+        'MEMUSAGE_LIMIT_MB': 2048,
+        'MEMUSAGE_NOTIFY_MAIL': ['juandavid.arce@utp.edu.co'],
+        'ROBOTSTXT_OBEY': True,
+        'USER_AGENT': 'Arce',
+        'FEED_EXPORT_ENCODING': 'utf-8'
     }
 
     def parse_only_quotes(self,response,**kwargs):
