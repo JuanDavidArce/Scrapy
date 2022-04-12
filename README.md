@@ -4,7 +4,6 @@ Scraper that allows extracting information about the declassified files of the c
 
 # Requirements
 
-* Go
 * Python
 * Scrapy (pip install scrapy)
 
